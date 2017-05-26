@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Memories of My Melancholy Whores</string>
+    <string name="cover">Cover</string>
+    <string name="intro">Preface</string>
+    <string name="ch01">Chapter 1</string>
+    <string name="ch02">Chapter 2</string>
+    <string name="ch03">Chapter 3</string>
+    <string name="ch04">Chapter 4</string>
+    <string name="ch05">Chapter 5</string>
+    <string name="about_me">About Me</string>
+</resources>
