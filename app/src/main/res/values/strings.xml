@@ -8,4 +8,6 @@
     <string name="ch04">Chapter 4</string>
     <string name="ch05">Chapter 5</string>
     <string name="about_me">About Me</string>
+    <string name="show_book_content">Read the Book</string>
+    <string name="about_app">About This Application</string>
 </resources>

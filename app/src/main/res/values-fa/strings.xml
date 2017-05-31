@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">خاطرات روسپی های غمگین من</string>
+    <string name="about_app">درباره برنامه</string>
+    <string name="about_me">درباره من</string>
+    <string name="ch01">فصل اول</string>
+    <string name="ch02">فصل دوم</string>
+    <string name="ch03">فصل سوم</string>
+    <string name="ch04">فصل چهارم</string>
+    <string name="ch05">فصل پنجم</string>
+    <string name="cover">جلد</string>
+    <string name="intro">پیشگفتار</string>
+    <string name="show_book_content">خواندن کتاب</string>
+</resources>

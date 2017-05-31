@@ -21,7 +21,6 @@ public class MainActivity2 extends AppCompatActivity {
     InputStream inputStream;
     WebSettings mWebSettings;
     Intent intent;
-    @TargetApi(17)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +28,6 @@ public class MainActivity2 extends AppCompatActivity {
         mWebView = (WebView) findViewById(R.id.webview_id);
         mWebSettings = mWebView.getSettings();
         mWebSettings.setDefaultTextEncodingName("utf-8");
-        mWebView.setTextDirection(View.TEXT_DIRECTION_RTL);
 
         intent=getIntent();
         int receivedView=intent.getExtras().getInt(MainActivity.EXTRA_MESSAGE);
@@ -59,9 +57,9 @@ public class MainActivity2 extends AppCompatActivity {
             case R.id.btn_about_me_id:
                 inputStream=getResources().openRawResource(R.raw.about_me);
                 break;
-
-
-
+            case R.id.btn_about_app_id:
+                inputStream=getResources().openRawResource(R.raw.about_app);
+                break;
         }
 
         StringWriter writer = new StringWriter();

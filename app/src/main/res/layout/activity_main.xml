@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="mehdihaghgoo.khateratebook.MainActivity">
-    <android.support.v7.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src=""
-        />
+
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
 
     <android.support.v7.widget.AppCompatButton
@@ -91,8 +83,15 @@
         android:text="@string/about_me"
         android:onClick="showAboutMe"
         />
-
-
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_about_app_id"
+        android:layout_alignStart="@+id/btn_about_me_id"
+        android:layout_alignLeft="@+id/btn_about_me_id"
+        android:layout_below="@+id/btn_about_me_id"
+        android:text="@string/about_app"
+        android:onClick="showAboutApp"/>
 
 
 

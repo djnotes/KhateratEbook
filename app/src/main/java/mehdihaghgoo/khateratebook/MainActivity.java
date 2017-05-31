@@ -72,4 +72,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void showAboutApp(View view) {
+        intent=new Intent(this,MainActivity2.class);
+        intent.putExtra(EXTRA_MESSAGE,R.id.btn_about_app_id);
+        startActivity(intent);
+    }
 }

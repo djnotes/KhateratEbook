@@ -15,6 +15,7 @@
         android:theme="@style/BookTheme"
         android:textDirection="rtl"
 
+
         />
 
 
