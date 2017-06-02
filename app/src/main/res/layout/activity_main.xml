@@ -4,7 +4,7 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
 
-    <android.support.v7.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_cover_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,9 +12,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
         android:onClick="showCover"
-        android:text="@string/cover" />
+        android:text="@string/cover"
+        />
 
-    <android.support.v7.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_intro_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +25,7 @@
         android:onClick="showPreface"
         android:text="@string/intro" />
 
-    <android.support.v7.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_ch01_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +35,7 @@
         android:onClick="showCh01"
         android:text="@string/ch01" />
 
-    <android.support.v7.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_ch02_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,7 +45,7 @@
         android:onClick="showCh02"
         android:text="@string/ch02" />
 
-    <android.support.v7.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_ch03_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,7 +55,7 @@
         android:onClick="showCh03"
         android:text="@string/ch03" />
 
-    <android.support.v7.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_ch04_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,7 +65,7 @@
         android:onClick="showCh04"
         android:text="@string/ch04" />
 
-    <android.support.v7.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_ch05_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,7 +74,7 @@
         android:layout_below="@+id/btn_ch04_id"
         android:onClick="showCh05"
         android:text="@string/ch05" />
-    <android.support.v7.widget.AppCompatButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_about_me_id"
@@ -83,7 +84,7 @@
         android:text="@string/about_me"
         android:onClick="showAboutMe"
         />
-    <android.support.v7.widget.AppCompatButton
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_about_app_id"

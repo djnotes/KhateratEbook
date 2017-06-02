@@ -8,6 +8,7 @@ import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
 
 import org.apache.commons.io.IOUtils;
 
@@ -16,7 +17,7 @@ import java.io.InputStream;
 import java.io.StringWriter;
 
 public class MainActivity2 extends AppCompatActivity {
-    AppCompatButton mButtonCover;
+    Button mButtonCover;
     WebView mWebView;
     InputStream inputStream;
     WebSettings mWebSettings;
@@ -69,9 +70,15 @@ public class MainActivity2 extends AppCompatActivity {
             System.out.println(ioex.getStackTrace());
 
         }
+        //close the stream
+        try {
+            inputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         String theString = writer.toString();
-        mWebView.loadDataWithBaseURL(null, theString, "text/plain", "charset=utf-8", null);
-
+//        mWebView.loadDataWithBaseURL(null, theString, "text/plain", "charset=utf-8",null);
+        mWebView.loadDataWithBaseURL(null,theString,"text/plain","charset=utf-8",null);
     }
 }

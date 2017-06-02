@@ -12,7 +12,6 @@
         android:layout_height="495dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="100dp"
-        android:theme="@style/BookTheme"
         android:textDirection="rtl"
 
 
