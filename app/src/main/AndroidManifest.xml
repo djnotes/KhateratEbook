@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity"
+        <activity android:name=".TOC_Activity"
 android:parentActivityName=".CoverActivity"
             >
             <meta-data
@@ -27,11 +27,11 @@ android:parentActivityName=".CoverActivity"
 
         </activity>
         <activity
-            android:name=".MainActivity2"
-            android:parentActivityName=".MainActivity">
+            android:name=".BookViewActivity"
+            android:parentActivityName=".TOC_Activity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".TOC_Activity" />
         </activity>
 
     </application>

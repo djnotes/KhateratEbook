@@ -1,11 +1,9 @@
 package mehdihaghgoo.khateratebook;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.AppCompatButton;
-import android.view.View;
+
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
@@ -16,7 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 
-public class MainActivity2 extends AppCompatActivity {
+public class BookViewActivity extends AppCompatActivity {
     Button mButtonCover;
     WebView mWebView;
     InputStream inputStream;
@@ -31,7 +29,7 @@ public class MainActivity2 extends AppCompatActivity {
         mWebSettings.setDefaultTextEncodingName("utf-8");
 
         intent=getIntent();
-        int receivedView=intent.getExtras().getInt(MainActivity.EXTRA_MESSAGE);
+        int receivedView=intent.getExtras().getInt(TOC_Activity.EXTRA_MESSAGE);
 //        mButtonCover = (AppCompatButton) findViewById(receivedView);
         switch(receivedView){
             case R.id.btn_cover_id:

@@ -1,9 +1,8 @@
 package mehdihaghgoo.khateratebook;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.Button;
 
@@ -22,7 +21,7 @@ public class CoverActivity extends AppCompatActivity {
     }
 
     public void showTOC(View view) {
-        intent= new Intent(CoverActivity.this,MainActivity.class);
+        intent= new Intent(CoverActivity.this, TOC_Activity.class);
         intent.putExtra(EXTRA_MESSAGE,true);
         startActivity(intent);
     }

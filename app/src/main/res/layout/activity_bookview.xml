@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="mehdihaghgoo.khateratebook.MainActivity2">
+    tools:context="mehdihaghgoo.khateratebook.BookViewActivity">
 
     <WebView
         android:id="@+id/webview_id"
@@ -13,6 +13,7 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="100dp"
         android:textDirection="rtl"
+        android:theme="@style/AppTheme"
 
 
         />
