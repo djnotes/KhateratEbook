@@ -1,41 +1,35 @@
-package mehdihaghgoo.khateratebook
+package khateratebook.garcia.me
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.MimeTypeFilter
 
 import android.os.Bundle
 
 import android.util.Log
 import android.view.View
-import android.view.WindowManager
-import android.webkit.MimeTypeMap
-import android.webkit.WebSettings
 import android.webkit.WebView
-import android.widget.Button
+import android.widget.ProgressBar
 
 
 import java.io.IOException
 import java.io.InputStream
-import java.io.StringWriter
-import java.net.HttpURLConnection
 import java.nio.charset.Charset
 
 class BookViewActivity : AppCompatActivity() {
-//    var mWebView: WebView
+
     @SuppressLint("InlinedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bookview)
+        val progressBar: ProgressBar = findViewById(R.id.progressBar)
+
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         val mWebView = findViewById<View>(R.id.webview_id) as WebView
         val mWebSettings = mWebView.settings
         mWebSettings.defaultTextEncodingName = "utf-8"
 
         val intent = getIntent()
-        val receivedView = intent.extras!!.getInt(TOC_Activity.EXTRA_MESSAGE)
-        //        mButtonCover = (AppCompatButton) findViewById(receivedView);
+        val receivedView = intent.extras?.getInt(TOC_Activity.EXTRA_MESSAGE)
         var inputStream: InputStream = resources.openRawResource(R.raw.cover)
         when (receivedView) {
             R.id.btn_cover_id -> inputStream = resources.openRawResource(R.raw.cover)
@@ -49,12 +43,12 @@ class BookViewActivity : AppCompatActivity() {
             R.id.btn_about_app_id -> inputStream = resources.openRawResource(R.raw.about_app)
         }
 
-        val writer = StringWriter()
         val buffer = ByteArray(1000000)
         var read = 0
         var allString = ""
-        val bf: StringBuffer
 
+        //Show a progress bar
+        progressBar.visibility = View.VISIBLE;
 
         try {
             read = inputStream.read(buffer)
@@ -64,6 +58,8 @@ class BookViewActivity : AppCompatActivity() {
         } catch (ex: Exception) {
             Log.e("BookViewActivity", "Error reading byte buffer to string: " + ex.toString())
         }
+        progressBar.visibility = View.GONE
+
 
         //close the stream
         try {
@@ -72,7 +68,6 @@ class BookViewActivity : AppCompatActivity() {
             e.printStackTrace()
         }
 
-        val theString = writer.toString()
         Log.i("BookViewActivity", "onCreate: book string: $allString")
         val head = "<!DOCTYPE html><html><head><style> @font-face{font-family: IRANSans; src: url('file:///android_asset/fonts/IRANSans.ttf');} *{font-family:IRANSans; direction:rtl;}</style></head><body>"
         val tail = "</body></html>"

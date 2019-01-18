@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/AppTheme">
+
+    <ImageView
+        android:id="@+id/img_cover_id"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cover"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:transitionName="sharedImage"
+        />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/img_cover_id"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        >
+
+
+        <Button
+            android:id="@+id/btn_cover_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showCover"
+            android:text="@string/cover" />
+
+        <Button
+            android:id="@+id/btn_intro_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showPreface"
+            android:text="@string/intro" />
+
+        <Button
+            android:id="@+id/btn_ch01_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showCh01"
+            android:text="@string/ch01" />
+
+        <Button
+            android:id="@+id/btn_ch02_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showCh02"
+            android:text="@string/ch02" />
+
+        <Button
+            android:id="@+id/btn_ch03_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showCh03"
+            android:text="@string/ch03" />
+
+        <Button
+            android:id="@+id/btn_ch04_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showCh04"
+            android:text="@string/ch04" />
+
+        <Button
+            android:id="@+id/btn_ch05_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showCh05"
+            android:text="@string/ch05" />
+
+        <Button
+            android:id="@+id/btn_about_me_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showAboutMe"
+            android:text="@string/about_me" />
+
+        <Button
+            android:id="@+id/btn_about_app_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showAboutApp"
+            android:text="@string/about_app" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

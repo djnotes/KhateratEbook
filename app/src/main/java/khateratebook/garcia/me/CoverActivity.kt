@@ -1,9 +1,11 @@
-package mehdihaghgoo.khateratebook
+package khateratebook.garcia.me
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
+import androidx.core.app.ActivityOptionsCompat
 
 class CoverActivity : AppCompatActivity() {
 
@@ -16,7 +18,8 @@ class CoverActivity : AppCompatActivity() {
     fun showTOC(view: View) {
         val intent: Intent ?= Intent(this, TOC_Activity::class.java)
         intent?.putExtra(EXTRA_MESSAGE, true)
-        startActivity(intent)
+        val sharedView : ImageView = findViewById(R.id.img_cover_id)
+        startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this, sharedView, "sharedImage").toBundle())
     }
 
     companion object {
