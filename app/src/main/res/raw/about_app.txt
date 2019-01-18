@@ -3,3 +3,8 @@ Designed and Developed by: Mehdi Haghgoo © 2017
 
 طراحی و برنامه نویسی:
 مهدی حقگو © ۱۳۹۶
+
+<br/>
+<div>
+This is an open source project. Link: <a href="https://github.com/djnotes/KhateratEbook">https://github.com/djnotes/KhateratEbook</a>
+</div>
