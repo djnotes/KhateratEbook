@@ -6,30 +6,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:theme="@style/AppTheme">
 
-    <ImageView
-        android:id="@+id/img_cover_id"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/cover"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:transitionName="sharedImage"
-        />
 
-
+<ScrollView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_margin="@dimen/margin"
+    android:padding="@dimen/padding"
+    >
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/img_cover_id"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center"
+        android:padding="@dimen/padding"
+        android:layout_margin="@dimen/margin"
         >
 
+        <ImageView
+            android:id="@+id/img_cover_id"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cover"
+            android:transitionName="sharedImage"
+            />
 
         <Button
             android:id="@+id/btn_cover_id"
@@ -93,8 +98,7 @@
             android:layout_height="wrap_content"
             android:onClick="showAboutApp"
             android:text="@string/about_app" />
-
-
     </LinearLayout>
+</ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

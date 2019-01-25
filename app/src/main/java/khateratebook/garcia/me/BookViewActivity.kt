@@ -21,12 +21,15 @@ class BookViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bookview)
-        val progressBar: ProgressBar = findViewById(R.id.progressBar)
+
+        val mProgress = findViewById(R.id.progressBar) as ProgressBar
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        val mWebView = findViewById<View>(R.id.webview_id) as WebView
+        val mWebView = findViewById<View>(R.id.webView) as WebView
         val mWebSettings = mWebView.settings
         mWebSettings.defaultTextEncodingName = "utf-8"
+
+
 
         val intent = getIntent()
         val receivedView = intent.extras?.getInt(TOC_Activity.EXTRA_MESSAGE)
@@ -47,8 +50,7 @@ class BookViewActivity : AppCompatActivity() {
         var read = 0
         var allString = ""
 
-        //Show a progress bar
-        progressBar.visibility = View.VISIBLE;
+
 
         try {
             read = inputStream.read(buffer)
@@ -58,12 +60,12 @@ class BookViewActivity : AppCompatActivity() {
         } catch (ex: Exception) {
             Log.e("BookViewActivity", "Error reading byte buffer to string: " + ex.toString())
         }
-        progressBar.visibility = View.GONE
 
 
         //close the stream
         try {
             inputStream.close()
+
         } catch (e: IOException) {
             e.printStackTrace()
         }
@@ -72,6 +74,7 @@ class BookViewActivity : AppCompatActivity() {
         val head = "<!DOCTYPE html><html><head><style> @font-face{font-family: IRANSans; src: url('file:///android_asset/fonts/IRANSans.ttf');} *{font-family:IRANSans; direction:rtl;}</style></head><body>"
         val tail = "</body></html>"
         mWebView.loadDataWithBaseURL(null, head + allString + tail, "text/html", "charset=utf-8", null)
+
     }
 
     companion object {
